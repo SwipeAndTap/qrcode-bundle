@@ -41,7 +41,7 @@ class SessionStorage implements StorageInterface
      */
     public function store(QRCodeInterface $qrCode, $id = null)
     {
-        $id =  $id ?: Uuid::uuid4();
+        $id = $id ?: Uuid::uuid4()->toString();
         $this->qrCodes[$id] = $qrCode;
 
         // store in session

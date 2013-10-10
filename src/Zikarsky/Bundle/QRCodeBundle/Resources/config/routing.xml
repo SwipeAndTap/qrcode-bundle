@@ -4,7 +4,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
     <route id="zikarsky_qrcode_display" pattern="/qr/{id}">
-        <default key="_controller">ZikarskyQRCodeBundle:QRCode:display</default>
+        <default key="_controller">zikarsky_qrcode.controller:displayAction</default>
         <requirement key="_method">GET</requirement>
     </route>
 </routes>

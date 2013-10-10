@@ -4,6 +4,7 @@ namespace Zikarsky\Bundle\QRCodeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use Zikarsky\Bundle\QRCodeBundle\QRCodeInterface;
 
 class Configuration implements ConfigurationInterface
 {
@@ -19,6 +20,7 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue('zikarsky_qrcode.storage.session')
                 ->end()
                 ->arrayNode('renderer')
+                    ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('service')
                             ->defaultValue('zikarsky_qrcode.renderer.endroid')

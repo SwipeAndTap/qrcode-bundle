@@ -7,7 +7,7 @@ use Zikarsky\Bundle\QRCodeBundle\RenderedQRCodeInterface;
 
 abstract class AbstractRenderer implements RendererInterface
 {
-    const OPTION_ERROR_CORRECTION = "errorRorrection";
+    const OPTION_ERROR_CORRECTION = "errorCorrection";
     const OPTION_SIZE = "size";
 
     /**

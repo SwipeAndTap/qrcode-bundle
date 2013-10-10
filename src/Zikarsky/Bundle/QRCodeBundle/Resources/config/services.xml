@@ -14,6 +14,18 @@
 
         <service id="zikarsky_qrcode.storage.session" class="Zikarsky\Bundle\QRCodeBundle\Storage\SessionStorage">
             <argument type="service" id="session" />
+            <argument type="string">zikarsky_qrcode_session_storage</argument>
+        </service>
+
+
+        <service id="zikarsky_qrcode.controller" class="Zikarsky\Bundle\QRCodeBundle\Controller\QRCodeController">
+            <argument type="service" id="zikarsky_qrcode.service" />
+        </service>
+
+        <service id="zikarsky_qrcode.twig.extension" class="Zikarsky\Bundle\QRCodeBundle\Twig\QRCodeExtension">
+            <argument type="service" id="zikarsky_qrcode.service" />
+            <argument type="service" id="router" />
+            <tag name="twig.extension" />
         </service>
     </services>
 

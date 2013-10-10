@@ -36,11 +36,11 @@ class QRCodeService
      * @return RenderedQRCodeInterface
      * @throws \RuntimeException
      */
-    public function render($id, array $options = [])
+    public function render($qrCode, array $options = [])
     {
-        $qrCode = $this->storage->load($id);
+        $qrCode = $qrCode instanceof QRCodeInterface ? $qrCode : $this->storage->load($qrCode);
         if (!$qrCode) {
-            throw new QRCodeNotFoundException("There is no QRCode with id $id");
+            throw new QRCodeNotFoundException("There is no QRCode with id $qrCode");
         }
 
         return $this->renderer->render($qrCode, $options);

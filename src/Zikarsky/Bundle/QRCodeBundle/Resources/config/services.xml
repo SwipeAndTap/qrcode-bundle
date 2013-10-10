@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="zikarsky_qrcode.service" class="Zikarsky\Bundle\QRCodeBundle\Service\QRCodeService">
+            <argument type="service" id="zikarsky_qrcode.storage" />
+            <argument type="service" id="zikarsky_qrcode.renderer" />
+        </service>
+
+        <service id="zikarsky_qrcode.renderer.endroid" class="Zikarsky\Bundle\QRCodeBundle\Renderer\EndroidRenderer"></service>
+
+        <service id="zikarsky_qrcode.storage.session" class="Zikarsky\Bundle\QRCodeBundle\Storage\SessionStorage">
+            <argument type="service" id="session" />
+        </service>
+    </services>
+
+
+
+
+</container>

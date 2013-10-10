@@ -1,0 +1,5 @@
+# composer specific
+/vendor
+
+# ide specific
+/.idea

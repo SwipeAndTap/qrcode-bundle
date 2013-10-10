@@ -1,0 +1,23 @@
+{
+    "name": "zikarsky/qrcode-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "A bundle providing a tight Symfony2 and Twig integration aiming to support multiple QRCode libraries.",
+    "homepage": "https://github.com/bzikarsky/qrcode-bundle",
+    "authors": [
+        {
+            "name": "Benjamin Zikarsky",
+            "email": "benjamin@zikarsky.de"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "rhumsaa/uuid": "~2.4",
+        "symfony/http-foundation": "~2.3",
+        "symfony/http-kernel": "~2.3",
+        "symfony/config": "~2.3",
+        "endroid/qrcode": "~1.1"
+    }
+}
